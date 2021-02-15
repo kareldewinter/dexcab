@@ -1,0 +1,90 @@
+{
+ "properties": {
+  "displayName": "pol-santa-gov-001",
+  "policyType": "Custom",
+  "description": "Set of Microsoft policies to enforce Azure Governance.",
+  "metadata": {
+   "category": "Governance",
+   "createdBy": "59502f3d-e267-4074-8d5a-b54371a00c01",
+   "createdOn": "2020-12-17T18:55:01.2153972Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "ListOfAllowedLocations": {
+    "type": "Array"
+   },
+   "ListOfResourceTypesNotAllowed": {
+    "type": "Array"
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "1889217737044648305",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e56962a6-4747-49cd-b67b-bf8b01975c4c",
+    "parameters": {
+     "listOfAllowedLocations": {
+      "value": "[parameters('ListOfAllowedLocations')]"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "15868866781725488614",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988",
+    "parameters": {
+     "listOfAllowedLocations": {
+      "value": "[parameters('ListOfAllowedLocations')]"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "8863914366993130822",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/871b6d14-10aa-478d-b590-94f262ecfa99",
+    "parameters": {
+     "tagName": {
+      "value": "CostCenter"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "6011499114907673686",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/871b6d14-10aa-478d-b590-94f262ecfa99",
+    "parameters": {
+     "tagName": {
+      "value": "Application"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "17106350605824284407",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ea3f2387-9b95-492a-a190-fcdc54f7b070",
+    "parameters": {
+     "tagName": {
+      "value": "CostCenter"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "13961535777790805402",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ea3f2387-9b95-492a-a190-fcdc54f7b070",
+    "parameters": {
+     "tagName": {
+      "value": "Application"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "9170841336664387540",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6c112d4e-5bc7-47ae-a041-ea2d9dccd749",
+    "parameters": {
+     "listOfResourceTypesNotAllowed": {
+      "value": "[parameters('ListOfResourceTypesNotAllowed')]"
+     }
+    }
+   }
+  ]
+ },
+ "id": "/subscriptions/8dbea51a-6443-4ce5-804a-a652895de81a/providers/Microsoft.Authorization/policySetDefinitions/pol-santa-gov-001",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "pol-santa-gov-001"
+}
